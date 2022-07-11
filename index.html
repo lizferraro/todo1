@@ -9,26 +9,26 @@
     <body>
         <button>Press me!</button>
         <script>
-            let todo1 = 'Get groceries';
-            let todo2 = 'Wash car';
-            let todo3 = 'Make dinner';
-            
-            function addTodo(todoTitle) {
+
+            let todos = ['Get groceries', 'Wash car', 'Make dinner'];
+            todos.push('another todo');
+
+            todos.forEach(function (todoTitle) {
                 let element = document.createElement('div');
                 element.innerText = todoTitle;
                 document.body.appendChild(element);
+            });
+
+            function toUpper(stringArr) {
+                let result = [];
+                stringArr.forEach(function (str) {
+                    result.push(str.toUpperCase());
+                });
+
+                console.log(result);
             }
+            toUpper(['Andrew', 'Liz', 'Annabelle', 'Alexandria', 'Lucille'])
 
-            addTodo(todo1);
-            addTodo(todo2);
-            addTodo(todo3);
-
-
-            function greeting(firstName) {
-                console.log('hello ' + firstName);
-            }
-
-            greeting('Liz');
 
         </script>
     </body>
